@@ -26,7 +26,7 @@ func main() {
  // Calculate the number of packets needed to achieve 1GB/s traffic
  packetSize := 1400 // Adjust packet size as needed
  packetsPerSecond := 1_000_000_000 / packetSize
- numThreads := packetsPerSecond / 15_000
+ numThreads := packetsPerSecond / 25_000
 
  // Create wait group to ensure all goroutines finish before exiting
  var wg sync.WaitGroup
