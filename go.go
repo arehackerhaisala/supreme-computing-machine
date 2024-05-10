@@ -24,7 +24,7 @@ func main() {
  }
 
  // Calculate the number of packets needed to achieve 1GB/s traffic
- packetSize := 1400 // Adjust packet size as needed
+ packetSize := 1000 // Adjust packet size as needed
  packetsPerSecond := 1_000_000_000 / packetSize
  numThreads := packetsPerSecond / 25_000
 
@@ -60,7 +60,7 @@ func sendUDPPackets(ip, port string, packetsPerSecond int) {
  defer conn.Close()
 
  // Generate and send UDP packets continuously
- packet := make([]byte, 1400) // Adjust packet size as needed
+ packet := make([]byte, 1000) // Adjust packet size as needed
  for {
   for i := 0; i < packetsPerSecond; i++ {
    _, err := conn.Write(packet)
